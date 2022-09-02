@@ -14,74 +14,15 @@ For motion models , systemization can be achieved by defining different levels o
 
 #### Constant Velocity Model
 
-As for the CV model, we annote its space state with
-$$
-\vec{x}(t)=\left(\begin{array}{llll}
-x & v_{x} & y & v_{y}
-\end{array}\right)^{T}
-$$
-is a linear motion model, the linear state transition
-
-$$
-\vec{x}(t+T)=F* \vec{x}(t)
-$$
-is substituted by the state transition function vector
-$$
-F=\left[\begin{array}{llll}
-1 & T & 0 & 0 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & T \\
-0 & 0 & 0 & 1
-\end{array}\right]
-$$
+![image-20220902170057196](https://raw.githubusercontent.com/wannain/image/main/2022/09/upgit_20220902_1662109257.png)
 
 #### Constant Acceleration Model
 
-As for the CA model, we annote its space state with
-$$
-\vec{x}(t)=\left(\begin{array}{llllll}
-x & v_{x} & a_{x} & y & v_{y} & a_{y}
-\end{array}\right)^{T}
-$$
-is a linear motion model, the linear state transition
-
-$$
-\vec{x}(t+T)=F* \vec{x}(t)
-$$
-is substituted by the state transition function vector
-$$
-F=\left[\begin{array}{llllll}
-1 & T & \frac{T^2}{2} & 0 & 0 & 0 \\
-0 & 1 & T & 0 & 0 & 0\\
-0 & 0 & 1 & 0 & 0 & 0\\
-0 & 0 & 0 & 1 & T & \frac{T^2}{2}\\
-0 & 0 & 0 & 0 & 1 & T\\
-0 & 0 & 0 & 0 & 0 & 1\\
-\end{array}\right]
-$$
+![image-20220902170124921](https://raw.githubusercontent.com/wannain/image/main/2022/09/upgit_20220902_1662109285.png)
 
 #### Constant turning rate model
 
-As for the CT model, we annote its space state with
-$$
-\vec{x}(t)=\left(\begin{array}{llll}
-x & v_{x} & y & v_{y}
-\end{array}\right)^{T}
-$$
-is a nonlinear motion model, the nonlinear state transition
-
-$$
-\vec{x}(t+T)=F(\omega_t)* \vec{x}(t)+\omega_t
-$$
-is substituted by the state transition function vector
-$$
-F\left(\omega_{t}\right)=\left[\begin{array}{cccc}
-1 & \frac{\sin \left(\omega_{t} T\right)}{\omega_{t}} & 0 & -\frac{1-\cos \left(\omega_{t} T\right)}{\omega_{t}} \\
-0 & \cos \left(\omega_{t} T\right) & 0 & -\sin \left(\omega_{t} T\right) \\
-0 & \frac{1-\cos \left(\omega_{t} T\right)}{\omega_{t}} & 1 & \frac{\sin \left(\omega_{t} T\right)}{\omega_{t}} \\
-0 & \sin \left(\omega_{t} T\right) & 0 & \cos \left(\omega_{t} T\right)
-\end{array}\right]
-$$
+![image-20220902170203356](https://raw.githubusercontent.com/wannain/image/main/2022/09/upgit_20220902_1662109323.png)
 
 ## Multi-sensor framework
 
